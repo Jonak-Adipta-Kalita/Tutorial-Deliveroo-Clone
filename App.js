@@ -1,10 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 
-export default function App() {
+const App = () => {
   return (
     <View>
       <StatusBar style="auto" />
     </View>
   );
-}
+};
+
+export default App;
