@@ -1,11 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
+import { TailwindProvider } from "tailwindcss-react-native";
 
 const App = () => {
   return (
-    <View>
+    <TailwindProvider>
       <StatusBar style="auto" />
-    </View>
+      <View></View>
+    </TailwindProvider>
   );
 };
 
