@@ -1,5 +1,12 @@
 import React, { useLayoutEffect } from "react";
-import { Image, Platform, SafeAreaView, Text, View } from "react-native";
+import {
+  Image,
+  Platform,
+  SafeAreaView,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
 import {
@@ -39,6 +46,16 @@ const HomeScreen = () => {
           </Text>
         </View>
         <UserIcon size={20} color="#00CCBB" />
+      </View>
+      <View className="flex-row items-center space-x-2 pb-2 mx-4">
+        <View className="flex-row space-x-2 flex-1 bg-gray-200 p-3">
+          <SearchIcon size={20} color="gray" />
+          <TextInput
+            placeholder="Restaurants and Cuissines"
+            keyboardType="default"
+          />
+        </View>
+        <AdjustmentsIcon size={20} color="#00CCBB" />
       </View>
     </SafeAreaView>
   );
