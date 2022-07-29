@@ -3,6 +3,7 @@ import {
   Image,
   Platform,
   SafeAreaView,
+  ScrollView,
   Text,
   TextInput,
   View,
@@ -15,6 +16,8 @@ import {
   SearchIcon,
   AdjustmentsIcon,
 } from "react-native-heroicons/outline";
+import Categories from "../components/Categories";
+import FeaturedRow from "../components/FeaturedRow";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -48,7 +51,7 @@ const HomeScreen = () => {
         <UserIcon size={20} color="#00CCBB" />
       </View>
       <View className="flex-row items-center space-x-2 pb-2 mx-4">
-        <View className="flex-row space-x-2 flex-1 bg-gray-200 p-3">
+        <View className="flex-row items-center space-x-2 flex-1 bg-gray-200 p-3">
           <SearchIcon size={20} color="gray" />
           <TextInput
             placeholder="Restaurants and Cuissines"
@@ -57,6 +60,27 @@ const HomeScreen = () => {
         </View>
         <AdjustmentsIcon size={20} color="#00CCBB" />
       </View>
+      <ScrollView
+        className="bg-gray-100"
+        contentContainerStyle={{ paddingBottom: 100 }}
+      >
+        <Categories />
+        <FeaturedRow
+          id="0"
+          title="Featured"
+          description="Paid payments from our partners"
+        />
+        <FeaturedRow
+          id="1"
+          title="Tasty Discounts"
+          description="Everyone's been enjoying this tasty discounts!"
+        />
+        <FeaturedRow
+          id="2"
+          title="Offers near you!"
+          description="Why not support your local restaraunts tonight!"
+        />
+      </ScrollView>
     </SafeAreaView>
   );
 };
