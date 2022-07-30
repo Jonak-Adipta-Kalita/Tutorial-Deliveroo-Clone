@@ -43,14 +43,14 @@ export default {
       name: "type",
       title: "Category",
       validation: (Rule) => Rule.required(),
-      type: "referrence",
+      type: "reference",
       to: [{ type: "category" }],
     },
     {
       name: "dishes",
       type: "array",
       title: "Dishes",
-      of: [{ type: "referrence", to: [{ type: "dish" }] }],
+      of: [{ type: "reference", to: [{ type: "dish" }] }],
     },
   ],
 };
