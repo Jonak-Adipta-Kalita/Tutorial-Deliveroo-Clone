@@ -1,7 +1,7 @@
 import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
-const client = await sanityClient({
+const client = sanityClient({
   projectId: "t57bgjnz",
   dataset: "production",
   useCdn: true,
