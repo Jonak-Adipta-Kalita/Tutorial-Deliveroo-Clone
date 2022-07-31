@@ -72,18 +72,26 @@ const RestaurantScreen = () => {
           <ChevronRightIcon color="#00CCBB" />
         </TouchableOpacity>
       </View>
-      <View className="pt-6 px-4 mb-3 font-bold text-xl">
-        <Text>Menu</Text>
-        {dishes?.map((dish) => (
-          <DishRow
-            key={dish._id}
-            id={dish._id}
-            name={dish.name}
-            description={dish.short_description}
-            price={dish.price}
-            image={dish.image}
-          />
-        ))}
+      <View>
+        {dishes ? (
+          <View>
+            <Text className="pt-6 px-4 mb-3 font-bold text-xl">Menu</Text>
+            {dishes.map((dish) => (
+              <DishRow
+                key={dish._id}
+                id={dish._id}
+                name={dish.name}
+                description={dish.short_description}
+                price={dish.price}
+                image={dish.image}
+              />
+            ))}
+          </View>
+        ) : (
+          <Text className="pt-6 px-4 mb-3 font-bold text-xl self-center">
+            No Dish
+          </Text>
+        )}
       </View>
     </ScrollView>
   );
