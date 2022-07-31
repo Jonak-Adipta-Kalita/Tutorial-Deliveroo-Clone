@@ -47,7 +47,7 @@ const FeaturedRow = ({ id, title, description }) => {
             imgUrl={urlFor(restaurant.image).url()}
             title={restaurant.name}
             rating={restaurant.rating}
-            genre={restaurant.type.name}
+            genre={restaurant.type?.name}
             address={restaurant.address}
             short_description={restaurant.short_description}
             dishes={restaurant.dishes}
