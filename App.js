@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
 import RestaurantScreen from "./screens/RestaurantScreen";
 import BasketScreen from "./screens/BasketScreen";
+import PreparingOrderScreen from "./screens/PreparingOrderScreen";
 import { Provider as ReduxProvider } from "react-redux";
 import { store } from "./store";
 
@@ -18,6 +19,10 @@ const App = () => {
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Restaurant" component={RestaurantScreen} />
             <Stack.Screen name="Basket" component={BasketScreen} />
+            <Stack.Screen
+              name="PreparingOrder"
+              component={PreparingOrderScreen}
+            />
           </Stack.Navigator>
         </TailwindProvider>
       </ReduxProvider>
