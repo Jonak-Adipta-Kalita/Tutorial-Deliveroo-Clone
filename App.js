@@ -5,6 +5,7 @@ import HomeScreen from "./screens/HomeScreen";
 import RestaurantScreen from "./screens/RestaurantScreen";
 import BasketScreen from "./screens/BasketScreen";
 import PreparingOrderScreen from "./screens/PreparingOrderScreen";
+import DeliveryScreen from "./screens/DeliveryScreen";
 import { Provider as ReduxProvider } from "react-redux";
 import { store } from "./store";
 
@@ -23,6 +24,7 @@ const App = () => {
               name="PreparingOrder"
               component={PreparingOrderScreen}
             />
+            <Stack.Screen name="Delivery" component={DeliveryScreen} />
           </Stack.Navigator>
         </TailwindProvider>
       </ReduxProvider>

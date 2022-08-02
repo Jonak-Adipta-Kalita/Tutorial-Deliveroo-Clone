@@ -12,6 +12,7 @@ import DishRow from "../components/DishRow";
 import BasketIcon from "../components/BasketIcon";
 import { useDispatch } from "react-redux";
 import { setRestaurant } from "../slices/restaurantSlice";
+import { setBasket } from "../slices/basketSlice";
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -65,7 +66,22 @@ const RestaurantScreen = () => {
           />
           <TouchableOpacity
             className="absolute top-14 left-5 p-2 bg-gray-100 rounded-full"
-            onPress={navigation.goBack}
+            onPress={() => {
+              navigation.goBack();
+              dispatch(
+                setRestaurant({
+                  id: null,
+                  imgUrl: null,
+                  title: null,
+                  rating: null,
+                  genre: null,
+                  address: null,
+                  short_decription: null,
+                  dishes: null,
+                })
+              );
+              dispatch(setBasket([]));
+            }}
           >
             <ArrowLeftIcon size={20} color="#00CCBB" />
           </TouchableOpacity>
